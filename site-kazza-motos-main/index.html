@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HEWYTPDCX2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HEWYTPDCX2');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kazza Motos</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Meta tags para SEO -->
+    <meta name="description" content="Peças, manutenção, capacetes e acessórios para motocicletas.  ">
+    <meta name="keywords" content="loja, motopeças, jaquetas, kit relação, Av. Cerro Azul 2018, kazza motos  ">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Kazza Motos Logo">
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar produtos...">
+            <button onclick="searchProducts()">Buscar</button>
+            <div id="suggestions" class="suggestions"></div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="filter-bar filter-bar-primary">
+        <button class="filter-btn" data-filter="all">Todos</button>
+
+        <div class="dropdown" tabindex="0">
+            <button class="filter-btn" data-filter="capacetes">Capacetes</button>
+            <div class="dropdown-content">
+                <button class="filter-btn" data-filter="axxis">Axxis</button>
+                <button class="filter-btn" data-filter="bieffe">Bieffe</button>
+                <button class="filter-btn" data-filter="helt">Helt</button>
+                <button class="filter-btn" data-filter="fly">Fly</button>
+                <button class="filter-btn" data-filter="ls2">LS2</button>
+                <button class="filter-btn" data-filter="gp-tech">Gp-Tech</button>
+            </div>
+        </div>
+
+        <div class="dropdown" tabindex="0">
+            <button class="filter-btn" data-filter="vestuario">Vestuário</button>
+            <div class="dropdown-content">
+                <button class="filter-btn" data-filter="jaqueta">Jaquetas</button>
+                <button class="filter-btn" data-filter="luva">Luvas</button>
+                <button class="filter-btn" data-filter="conj-chuva">Conjuntos de Chuva</button>
+            </div>
+        </div>
+
+        <div class="dropdown" tabindex="0">
+            <button class="filter-btn" data-filter="lubrificantes,kit-relacao,pneu">Manutenção</button>
+            <div class="dropdown-content">
+                <button class="filter-btn" data-filter="pneu">Pneus</button>
+                <button class="filter-btn" data-filter="kit-relacao">Kit-relação</button>
+                <button class="filter-btn" data-filter="lubrificantes">Lubrificantes</button>
+            </div>
+        </div>
+        <!-- Adicione mais botões de filtro conforme necessário -->
+    </div>
+    
+
+    <section id="home">
+        <div class="overlay"></div>
+        <div class="home-content">
+            <h1>Bem-vindo à Kazza Motos</h1>
+            <p>Peças e acessórios para sua moto</p>
+            <a href="https://wa.me/5544999231237" class="whatsapp-button"><i class="fab fa-whatsapp"></i>Nos Chame no WhatsApp!</a>
+        </div>
+    </section>
+    
+    <section id="sobre">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Sobre nós</h2>
+            <p>Qualidade no atendimento e nos serviços! Nossa equipe está pronta para te receber</p>
+            <p>Av. Cerro Azul 2018, Maringá</p>
+            <a href="https://www.google.com/maps/place/Kazza+Motos/@-23.4449045,-51.937453,17z/data=!3m1!4b1!4m6!3m5!1s0x94ecd0adf2402431:0xdd315387729ca23e!8m2!3d-23.4449095!4d-51.9328396!16s%2Fg%2F12cnv16sr?entry=ttu" target="_blank" class="maps-link">
+                <i class="fas fa-map-marker-alt"></i> Localização
+            </a>
+        </div>
+        <div class="gallery">    
+            <img src="images/empresa1.jpg" alt="">
+            <img src="images/empresa2.jpg" alt="">
+            <img src="images/empresa3.jpg" alt="">
+            <img src="images/empresa4.jpg" alt="">
+            <img src="images/empresa5.jpg" alt="">
+            <img src="images/empresa6.jpg" alt="">
+            <img src="images/empresa7.jpg" alt="">
+            <img src="images/empresa8.jpg" alt="">
+            <img src="images/empresa9.jpg" alt="">
+        </div>
+    </section>
+    
+    <section id="products">
+        <div class="overlay"></div>
+        <h2>Nossos Produtos</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+
+            <div class="dropdown" tabindex="0">
+                <button class="filter-btn" data-filter="capacetes">Capacetes</button>
+                <div class="dropdown-content">
+                    <button class="filter-btn" data-filter="axxis">Axxis</button>
+                    <button class="filter-btn" data-filter="bieffe">Bieffe</button>
+                    <button class="filter-btn" data-filter="helt">Helt</button>
+                    <button class="filter-btn" data-filter="fly">Fly</button>
+                    <button class="filter-btn" data-filter="ls2">LS2</button>
+                    <button class="filter-btn" data-filter="gp-tech">Gp-Tech</button>
+                </div>
+            </div>
+
+            <div class="dropdown" tabindex="0">
+                <button class="filter-btn" data-filter="pneu">Pneus</button>
+                <div class="dropdown-content">
+                    <button class="filter-btn" data-filter="aro21">Aro 21</button>
+                    <button class="filter-btn" data-filter="aro18">Aro 18</button>
+                    <button class="filter-btn" data-filter="aro17">Aro 17</button>
+                    <button class="filter-btn" data-filter="aro14">Aro 14</button>
+                </div>
+            </div>
+
+
+
+            <div class="dropdown" tabindex="0">
+                <button class="filter-btn" data-filter="kit-relacao">Kit-relação</button>
+                <div class="dropdown-content">
+                    <button class="filter-btn" data-filter="kit-titan">Cg Titan</button>
+                    <button class="filter-btn" data-filter="kit-fazer">Fazer</button>
+                    <button class="filter-btn" data-filter="kit-twister">Twister</button>
+                    <button class="filter-btn" data-filter="kit-ninja">Ninja</button>
+                    <button class="filter-btn" data-filter="kit-biz">Biz</button>
+                </div>
+            </div>
+
+
+
+            <div class="dropdown" tabindex="0">
+                <button class="filter-btn" data-filter="lubrificantes">Lubrificantes</button>
+                <div class="dropdown-content">
+                    <button class="filter-btn" data-filter="oleo-10w30">Óleo 10w30</button>
+                    <button class="filter-btn" data-filter="oleo-20w50">Óleo 20w50</button>
+                    <button class="filter-btn" data-filter="oleo-10w40">Óleo 10w40</button>
+                    <button class="filter-btn" data-filter="spray-corrente">Spray Corrente</button>
+                    <button class="filter-btn" data-filter="oleo-15w50">Óleo 15w50</button>
+                    <button class="filter-btn" data-filter="fluido-freio">Fluído</button>
+                </div>
+            </div>
+            </div>
+
+            <div class="dropdown" tabindex="0">
+                <button class="filter-btn" data-filter="vestuario">Vestuário</button>
+                <div class="dropdown-content">
+                    <button class="filter-btn" data-filter="jaqueta">Jaquetas</button>
+                    <button class="filter-btn" data-filter="luva">Luvas</button>
+                    <button class="filter-btn" data-filter="conj-chuva">Conjunto Chuva</button>
+                </div>
+            </div>
+            </div>
+
+
+
+        <div class="products-grid">
+            <!-- Lubrificantes -->
+            <div class="product-card lubrificantes oleo-10w30">
+                <img src="images/produtos/oleo-motor-mobil-10w30-semi-sintetico.jpg" alt="">
+                <h3>Óleo Motor 10W30 Mobil Semi Sintético 1 Litro</h3>
+                <p>Óleo Mobil 4 Tempos 10W30 Semi sintético MX 1Lt</p>
+                <p class="price">39,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-10w30">
+                <img src="images/produtos/oleo-motor-motul-10w30-semi-sintetico.jpg" alt="">
+                <h3>Óleo Motor 10W30 Motul 5000+ Semi Sintético 1 Litro</h3>
+                <p>Óleo Motul 4 Tempos 10W30 Semi sintético 5000 1Lt</p>
+                <p class="price">58,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-10w30">
+                <img src="images/produtos/oleo-motor-ipiranga-10w30-semi-sintetico.jpg" alt="">
+                <h3>Óleo Motor 10W30 Ipiranga Semi Sintético 1 Litro</h3>
+                <p>Óleo Ipiranga 4 Tempos 10W30 Semi Sintético SL Performance 1Lt</p>
+                <p class="price">35,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-10w30">
+                <img src="images/produtos/oleo-motor-lubrax-10w30-semi-sintetico.jpg" alt="">
+                <h3>Óleo Motor 10W30 Lubrax Semi Sintético 1 Litro</h3>
+                <p>Óleo Lubrax 4 Tempos 10W30 Semi Sintético 1Lt</p>
+                <p class="price">34,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-10w40">
+                <img src="images/produtos/oleo-motor-mobil-10w40-sintetico.jpg" alt="">
+                <h3>Óleo Motor 10W40 Mobil Super Moto Sintético 1 Litro</h3>
+                <p>Óleo Mobil 4 Tempos 10W40 Super Moto Sintético 1Lt</p>
+                <p class="price">79,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-10w40">
+                <img src="images/produtos/oleo-motor-motul-5000-10w40-semi-sintetico.jpg" alt="">
+                <h3>Óleo Motor 10W40 Motul 5000 Hc-tech Semi Sintético 1 Litro</h3>
+                <p>Óleo Motul 4 Tempos 10W40 5000 Hc-tech Semi Sintético 1Lt</p>
+                <p class="price">58,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-10w40">
+                <img src="images/produtos/oleo-motor-motul-5100-10w40-semi-sintetico.jpg" alt="">
+                <h3>Óleo Motor 10W40 Motul 5100 Semi Sintético 1 Litro</h3>
+                <p>Óleo Motul 4 Tempos 10W40 5100 Semi Sintético 1Lt</p>
+                <p class="price">83,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-15w50">
+                <img src="images/produtos/oleo-motor-mobil-15w50-semi-sintetico.jpg" alt="">
+                <h3>Óleo Motor 15W50 Mobil Super Moto Semi Sintético Mx 1 Litro</h3>
+                <p>Óleo Mobil 4 Tempos 15W50 Super Moto Semi Sintético 1Lt</p>
+                <p class="price">50,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-15w50">
+                <img src="images/produtos/oleo-motor-motul-5100-15w50-semi-sintetico.jpg" alt="">
+                <h3>Óleo Motor 15W50 Motul 5100 Semi Sintético 1 Litro</h3>
+                <p>Óleo Motul 4 Tempos 15W50 5100 Semi Sintético 1Lt</p>
+                <p class="price">83,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-20w50">
+                <img src="images/produtos/oleo-motor-lubrax-20w50.jpg" alt="">
+                <h3>Óleo Motor 20W50 Lubrax 1 Litro</h3>
+                <p>Óleo Lubrax 4 Tempos SL MINERAL 20w50 1Lt</p>
+                <p class="price">28,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-20w50">
+                <img src="images/produtos/oleo-motor-mobil-20w50.jpg" alt="">
+                <h3>Óleo Motor 20W50 Mobil Sg 1 Litro</h3>
+                <p>Óleo Mobil 4 Tempos SG MINERAL 20w50 1Lt</p>
+                <p class="price">33,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes oleo-20w50">
+                <img src="images/produtos/oleo-motor-3000-motul-20w50.jpg" alt="">
+                <h3>Óleo Motor 20W50 Motul 3000+ 1 Litro</h3>
+                <p>Óleo Motul 4 Tempos 20W50 3000+ 1Lt</p>
+                <p class="price">53,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card lubrificantes spray-corrente">
+                <img src="images/produtos/lubrificante-corrente-c2-motul-200ml.jpg" alt="">
+                <h3>Lubrificante Spray Corrente C2 Motul 200ml</h3>
+                <p>Spray Lubrificante Corrente Motul C2 Chain Lube Road 200ml</p>
+                <p class="price">48,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card lubrificantes spray-corrente">
+                <img src="images/produtos/lubrificante-corrente-c4-motul-400ml.jpg" alt="">
+                <h3>Lubrificante Spray Corrente C4 Motul 400ml</h3>
+                <p>Spray Lubrificante Corrente Motul C4 Chain Factory Line 400ml</p>
+                <p class="price">110,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card lubrificantes fluido-freio">
+                <img src="images/produtos/fluido-freio-motul-51-500ml.jpg" alt="">
+                <h3>Fluído Freio Motul Dot 5.1 500ml</h3>
+                <p>Brake Fluid Motul Dot 5.1 100% Sintético 500ml</p>
+                <p class="price">80,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card lubrificantes fluido-freio">
+                <img src="images/produtos/fluido-radiador-motocool-1l.jpg" alt="">
+                <h3>Fluído Radiador Motocool Expert Motul 1 Litro</h3>
+                <p>Fluído para Radiadores Motul Motocool Expert Hybrid -37º 1Lt</p>
+                <p class="price">55,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+
+            <!-- Pneus -->
+            <div class="product-card pneu aro21">
+                <img src="images/produtos/pneu-diant-9090-21-ira.jpg" alt="">
+                <h3>Pneu Dianteiro 90/90-21 Ira Bunker</h3>
+                <p>90/90-21 Bunker Adapt Ira</p>
+                <p class="price">280,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro21">
+                <img src="images/produtos/pneu-diant-cross-80100-21-pirelli.jpg" alt="">
+                <h3>Pneu Dianteiro Cross 80/100-21 Pirelli</h3>
+                <p>80/100-21 Crf230, 250 e 450 Pirelli</p>
+                <p class="price">240,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro21">
+                <img src="images/produtos/pneu-diant-cross-80100-21-rinaldi.jpg" alt="">
+                <h3>Pneu Dianteiro Cross 80/100-21 Rinaldi</h3>
+                <p>80/100-21 RMX 35 Rinaldi</p>
+                <p class="price">280,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-diant-275-18-ira.jpg" alt="">
+                <h3>Pneu Dianteiro Ira 275-18 Soho </h3>
+                <p>275-18 Titan 150 E 125 Fan 125 Cg Ira Soho</p>
+                <p class="price">198,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-diant-80100-18-michelin.jpg" alt="">
+                <h3>Pneu Dianteiro 80/100-18 S/camara Michelin </h3>
+                <p>80/100-18 Titan, CG 125, 150 e 160</p>
+                <p class="price">275,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-diant-80100-18-michelin.jpg" alt="">
+                <h3>Pneu Dianteiro 80/100-18 S/camara Michelin </h3>
+                <p>80/100-18 Titan, CG 125, 150 e 160 Michelin</p>
+                <p class="price">275,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-diant-80100-18-zoom.jpg" alt="">
+                <h3>Pneu Dianteiro 80/100-18 S/camara Zoom </h3>
+                <p>80/100-18 Titan, CG 125, 150 e 160 Zoom</p>
+                <p class="price">260,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-diant-80100-18-ira.jpg" alt="">
+                <h3>Pneu Dianteiro 80/100-18 Titan S/camara Masked Ira </h3>
+                <p>80/100-18 Masked Urban Titan47P TL Ira</p>
+                <p class="price">220,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-diant-80100-18-ira.jpg" alt="">
+                <h3>Pneu Dianteiro 80/100-18 Titan S/camara Masked Ira </h3>
+                <p>80/100-18 Masked Urban Titan47P TL Ira</p>
+                <p class="price">220,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-tras-9090-18-ira-ccamara.jpg" alt="">
+                <h3>Pneu Traseiro 90/90-18 C/camara Ira </h3>
+                <p>90/90-18 C/camara Ira</p>
+                <p class="price">198,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-tras-9090-18-ira-ccamara.jpg" alt="">
+                <h3>Pneu Traseiro 90/90-18 C/camara Ira </h3>
+                <p>90/90-18 C/camara Ira</p>
+                <p class="price">198,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-tras-9090-18-ira-scamara.jpg" alt="">
+                <h3>Pneu Traseiro 90/90-18 S/camara Ira </h3>
+                <p>90/90-18 S/camara Ira</p>
+                <p class="price">250,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-tras-9090-18-zoom-scamara.jpg" alt="">
+                <h3>Pneu Traseiro 90/90-18 S/camara Zoom </h3>
+                <p>90/90-18 S/camara Zoom</p>
+                <p class="price">270,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-tras-12080-18-ira.jpg" alt="">
+                <h3>Pneu Traseiro 120/80-18 Tornado, Lander, Xre300 Ira </h3>
+                <p>120/80-18 Tornado, Lander, Xre300 Ira</p>
+                <p class="price">365,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card pneu aro18">
+                <img src="images/produtos/pneu-tras-12080-18-ira.jpg" alt="">
+                <h3>Pneu Tras 120/80-18 Tornado, Lander e Xre 300 Rinaldi </h3>
+                <p>120/80-18 Tornado, Lander, Xre300 Rinaldi</p>
+                <p class="price">490,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card pneu aro17">
+                <img src="images/produtos/pneu-diant-12070-17-pirelli.jpg" alt="">
+                <h3>Pneu Dianteiro 120/70-17 Pirelli </h3>
+                <p>120/70-17 58W Angel ST Pirelli</p>
+                <p class="price">780,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card pneu aro17">
+                <img src="images/produtos/pneu-diant-12070-17-pirelli.jpg" alt="">
+                <h3>Pneu Dianteiro 60/100-17 Biz Ira </h3>
+                <p>60/100-17 Biz Ira</p>
+                <p class="price">135,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card pneu aro17">
+                <img src="images/produtos/pneu-diant-11070-17-ira.jpg" alt="">
+                <h3>Pneu Dianteiro 110/70-17 Cb 300, Mt e Ninja Ira </h3>
+                <p>110/70-17 Cb 300, Mt e Ninja Ira</p>
+                <p class="price">295,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card pneu aro17">
+                <img src="images/produtos/pneu-tras-11090-17-vipal.jpg" alt="">
+                <h3>Pneu Traseiro 110/90-17 Bros Tr300 Vipal </h3>
+                <p>110/90-17 Bros e Tr300 Vipal</p>
+                <p class="price">415,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card pneu aro17">
+                <img src="images/produtos/pneu-tras-14070-17-pirelli.jpg" alt="">
+                <h3>Pneu Traseiro 140/70-17 Cb 300, Mt e Ninja 66h Tl  Diablo Rosso Pirelli</h3>
+                <p>140/70-17 Cb 300, Mt e Ninja 66h Tl  Diablo Rosso Pirelli</p>
+                <p class="price">775,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card pneu aro17">
+                <img src="images/produtos/pneu-tras-12090-17-rinaldi.jpg" alt="">
+                <h3>Pneu Traseiro 120/90-17 Falcon R34 Rinaldi</h3>
+                <p>120/90-17 Falcon R34 Rinaldi</p>
+                <p class="price">549,50</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card pneu aro17">
+                <img src="images/produtos/pneu-tras-18055-17-pirelli.jpg" alt="">
+                <h3>Pneu Traseiro 180/55-17 Hornet Angel Pirelli</h3>
+                <p>120/90-17 Falcon R34 Rinaldi</p>
+                <p class="price">1.040,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card pneu aro17">
+                <img src="images/produtos/pneu-tras-13070-17-ira.jpg" alt="">
+                <h3>Pneu Traseiro 130/70-17 Twister Masked Gp Ira</h3>
+                <p>130/70-17 Twister Masked Gp Ira</p>
+                <p class="price">385,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card pneu aro14">
+                <img src="images/produtos/pneu-diant-9090-14-ira.jpg" alt="">
+                <h3>Pneu Dianteiro 90/90-14 Masked Scooter S/camara Ira</h3>
+                <p>90/90-14 Masked Scooter S/camara Ira</p>
+                <p class="price">240,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card pneu aro14">
+                <img src="images/produtos/pneu-tras-80100-14-ira.jpg" alt="">
+                <h3>Pneu Traseiro 80/100-14 Biz Ira Soho</h3>
+                <p>80/100-14 Biz Ira Soho</p>
+                <p class="price">165,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            
+            
+            
+            
+
+            
+
+
+            
+
+
+
+
+
+
+            <!-- Capacetes -->
+            <div class="product-card capacetes helt">
+                <img src="images/produtos/capacete-helt-avant-glass-kandux.jpg" alt="">
+                <h3>Capacete Helt Avant Glass Kandux</h3>
+                <p>Cor: Preto/Vermelho</p>
+                <p class="price">550,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>  
+            <div class="product-card capacetes helt">
+                <img src="images/produtos/capacete-helt-hippo-glass-imola.jpg" alt="">
+                <h3>Capacete Helt Hippo Glass Imola</h3>
+                <p>Cor: Amarelo/Azul</p>
+                <p class="price">750,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes helt">
+                <img src="images/produtos/capacete-cross-vision-glass-dusty.jpg" alt="">
+                <h3>Capacete Helt Cross Vision Glass Dusty</h3>
+                <p>Cor: Preto/Verde</p>
+                <p class="price">590,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes helt">
+                <img src="images/produtos/capacete-cross-vision-glass-ride.jpg" alt="">
+                <h3>Capacete Helt Cross Vision Glass Ride</h3>
+                <p>Cor: Preto/Cinza/Branco</p>
+                <p class="price">590,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes axxis">
+                <img src="images/produtos/capacete-axxis-draken-bomb-gloss.jpg" alt="">
+                <h3>Capacete Axxis Draken Bomb Gloss</h3>
+                <p>Cor: Preto/Cinza, Preto/Amarelo</p>
+                <p class="price">599,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes axxis">
+                <img src="images/produtos/capacete-axxis-draken-cougar-gloss.jpg" alt="">
+                <h3>Capacete Axxis Draken Cougar Gloss</h3>
+                <p>Cor: Preto/Rosa, Vermelho/Preto</p>
+                <p class="price">599,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes axxis">
+                <img src="images/produtos/capacete-axxis-draken-mystic-matt.jpg" alt="">
+                <h3>Capacete Axxis Draken Mystic Matt</h3>
+                <p>Cor: Preto/Vermelho/Amarelo</p>
+                <p class="price">599,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes axxis">
+                <img src="images/produtos/capacete-axxis-draken-vector-gloss.jpg" alt="">
+                <h3>Capacete Axxis Draken Vector Gloss</h3>
+                <p>Cor: Preto/Cinza, Preto/Branco</p>
+                <p class="price">599,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes axxis">
+                <img src="images/produtos/capacete-axxis-eagle-catrina-matt.jpg" alt="">
+                <h3>Capacete Axxis Eagle Catrina Matt</h3>
+                <p>Cor: Preto/Azul/Vermelho</p>
+                <p class="price">599,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes axxis">
+                <img src="images/produtos/capacete-axxis-eagle-diagon.jpg" alt="">
+                <h3>Capacete Axxis Eagle Diagon Gloss</h3>
+                <p>Cor: Vermelho/Preto</p>
+                <p class="price">599,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes axxis">
+                <img src="images/produtos/capacete-axxis-draken-dekers.jpg" alt="">
+                <h3>Capacete Axxis Draken Dekers Gloss</h3>
+                <p>Cor: Vermelho/Preto</p>
+                <p class="price">599,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card capacetes ls2">
+                <img src="images/produtos/capacete-ls2-stream-angel.jpg" alt="">
+                <h3>Capacete LS2 FF320 Stream Crown</h3>
+                <p>Cor: Rosa, Azul</p>
+                <p class="price">924,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes ls2">
+                <img src="images/produtos/capacete-ls2-stream-crown.jpg" alt="">
+                <h3>Capacete LS2 FF320 Stream Angel</h3>
+                <p>Cor: Vermelho</p>
+                <p class="price">924,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            
+            <div class="product-card capacetes gp-tech">
+                <img src="images/produtos/capacete-gp-tech-open-of669.jpg" alt="">
+                <h3>Capacete Gp-tech Open Of669 Range </h3>
+                <p>Cor: Branco, Azul</p>
+                <p class="price">620,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes gp-tech">
+                <img src="images/produtos/capacete-gp-tech-open-of669-tricolor.jpg" alt="">
+                <h3>Capacete Gp-tech Open Of669 Range Tricolor </h3>
+                <p>Cor: Laranja</p>
+                <p class="price">620,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes gp-tech">
+                <img src="images/produtos/capacete-gp-tech-open-of669-uk.jpg" alt="">
+                <h3>Capacete Gp-tech Open Of669 Uk Fosco </h3>
+                <p>Cor: Preto, Branco</p>
+                <p class="price">620,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+
+            <div class="product-card capacetes bieffe">
+                <img src="images/produtos/capacete-bieffe-b-12-guepard.jpg" alt="">
+                <h3>Capacete Bieffe B-12 Guepard</h3>
+                <p>Cor: Verde/Rosa, Preto/Vermelho</p>
+                <p class="price">520,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card capacetes bieffe">
+                <img src="images/produtos/capacete-bieffe-b-40-everest.jpg" alt="">
+                <h3>Capacete Bieffe B-40 Everest</h3>
+                <p>Cor: Grafite/Laranja</p>
+                <p class="price">625,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card capacetes fly">
+                <img src="images/produtos/capacete-fly-drive-hg-blaze.jpg" alt="">
+                <h3>Capacete Fly Drive Hg Blaze</h3>
+                <p>Cor: Preto/Branco</p>
+                <p class="price">270,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>  
+            <div class="product-card capacetes fly">
+                <img src="images/produtos/capacete-fly-drive-hg-rebel.jpg" alt="">
+                <h3>Capacete Fly Drive Hg Rebel</h3>
+                <p>Cor: Preto/Vermelho</p>
+                <p class="price">275,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>  
+            <div class="product-card capacetes fly">
+                <img src="images/produtos/capacete-fly-drive-hg-run.jpg" alt="">
+                <h3>Capacete Fly Drive Hg Run</h3>
+                <p>Cor: Preto/Rosa/Vermelho</p>
+                <p class="price">275,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>  
+
+
+
+            
+
+
+
+
+            <!-- Kit-Relação -->
+            <div class="product-card kit-relacao kit-titan">
+                <img src="images/produtos/kit-relac-riffel.jpg" alt="">
+                <h3>Kit Relação CG Titan 125 Riffel</h3>
+                <p>Kit Relação Com Corrente Cg 125, Cargo, Fan, Today, Turuna Riffel</p>
+                <p class="price">110,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-titan">
+                <img src="images/produtos/kit-relac-scud.jpg" alt="">
+                <h3>Kit Relação CG Titan 125 Fan 09 a 13 Scud</h3>
+                <p>Kit Relação Coroa Corrente Pinhão Honda Fan 125 09 a 13 Scud</p>
+                <p class="price">115,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-titan">
+                <img src="images/produtos/kit-relac-riffel.jpg" alt="">
+                <h3>Kit Relação CG Titan 150 Riffel</h3>
+                <p>Kit Relação Com Corrente Cg 150 Cargo, Fan, Ks, Es, Job, Sport Riffel</p>
+                <p class="price">110,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-titan">
+                <img src="images/produtos/kit-relac-riffel.jpg" alt="">
+                <h3>Kit Relação CG Titan 160 Riffel</h3>
+                <p>Kit Relação Com Corrente Cg 160 Cargo, Titan, Fan Esdi, Star Riffel</p>
+                <p class="price">110,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-titan">
+                <img src="images/produtos/kit-relac-scud.jpg" alt="">
+                <h3>Kit Relação CG Titan Fan 160 Scud</h3>
+                <p>Kit Relação Com Corrente Cg Fan 160 Cargo Start Ks, Es, Esd Scud</p>
+                <p class="price">110,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-fazer">
+                <img src="images/produtos/kit-relac-riffel.jpg" alt="">
+                <h3>Kit Relação Fazer 150 Riffel</h3>
+                <p>Kit Relação Com Corrente Yf 150 Fazer Ubs-ed-sed Riffel</p>
+                <p class="price">140,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-fazer">
+                <img src="images/produtos/kit-relac-scud.jpg" alt="">
+                <h3>Kit Relação Fazer 150 Scud</h3>
+                <p>Kit Relação Yamaha Fazer 150 2014 Até 2020 Scud</p>
+                <p class="price">125,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-fazer">
+                <img src="images/produtos/kit-relac-riffel.jpg" alt="">
+                <h3>Kit Relação Fazer 250 Riffel</h3>
+                <p>Kit Relação Yamaha Fazer 250 2018 Até 2020 Com Retentor Riffel</p>
+                <p class="price">170,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-biz">
+                <img src="images/produtos/kit-relac-riffel.jpg" alt="">
+                <h3>Kit Relação Biz 100 Riffel</h3>
+                <p>Kit Relação Com Corrente C100 Biz, 100 Biz Ks, C100 Biz+, C100 Biz-es</p>
+                <p class="price">110,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-biz">
+                <img src="images/produtos/kit-relac-scud.jpg" alt="">
+                <h3>Kit Relação Biz 100 Scud</h3>
+                <p>Kit Relação Honda Biz 100 Até 2012 Scud</p>
+                <p class="price">110,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-biz">
+                <img src="images/produtos/kit-relac-riffel.jpg" alt="">
+                <h3>Kit Relação Biz 125 Riffel</h3>
+                <p>Kit Relação Com Corrente Biz 125, 125i Es, Ks, Ex Riffel</p>
+                <p class="price">110,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-biz">
+                <img src="images/produtos/kit-relac-scud.jpg" alt="">
+                <h3>Kit Relação Biz 125 Scud</h3>
+                <p>Kit Relação Biz 125 2005 a 2022 Scud</p>
+                <p class="price">110,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-twister">
+                <img src="images/produtos/kit-relac-riffel.jpg" alt="">
+                <h3>Kit Relação Cb 250f Twister Riffel</h3>
+                <p>Kit Relação Com Corrente Cb 250f Twister Riffel</p>
+                <p class="price">230,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-twister">
+                <img src="images/produtos/kit-relac-riffel.jpg" alt="">
+                <h3>Kit Relação Cbx 250 Twister Riffel</h3>
+                <p>Kit Relação Com Corrente Cbx 250 Twister</p>
+                <p class="price">190,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-twister">
+                <img src="images/produtos/kit-relac-riffel-top.jpg" alt="">
+                <h3>Kit Relação Top Cbx 250 Twister Riffel</h3>
+                <p>Kit Relação Com Corrente O’ring Top Cbx 250 Twister Riffel</p>
+                <p class="price">320,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            <div class="product-card kit-relacao kit-ninja">
+                <img src="images/produtos/kit-relac-riffel-top.jpg" alt="">
+                <h3>Kit Relação Top Ninja 300 Riffel</h3>
+                <p>Kit Com Corrente O’ring Top Ninja 300 Riffel</p>
+                <p class="price">340,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>  
+            
+
+            <!-- Vestuário -->
+            <div class="product-card vestuario jaqueta">
+                <img src="images/produtos/jaqueta-gp-tech-feminina-rosa.jpg" alt="">
+                <h3>Jaqueta Gp Tech Feminina Essence </h3>
+                <p>Cor: Preta-rosa <br> Tamanho: 4G-3XL</p>
+                <p class="price">390,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>  
+            <div class="product-card vestuario jaqueta">
+                <img src="images/produtos/jaqueta-gp-tech-feminina-casual-cinza.jpg" alt="">
+                <h3>Jaqueta Gp Tech Feminina Tour Casual Resistente a Água </h3>
+                <p>Cor: Cinza <br> Tamanho: M</p>
+                <p class="price">430,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>  
+            <div class="product-card vestuario jaqueta">
+                <img src="images/produtos/jaqueta-gp-tech-soft-casual-preta.jpg" alt="">
+                <h3>Jaqueta Gp Tech Soft Casual Resistente a Água Camuflada </h3>
+                <p>Cor: Preto <br> Tamanho: 8G-7XL, GG-XL</p>
+                <p class="price">390,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>  
+            <div class="product-card vestuario jaqueta">
+                <img src="images/produtos/jaqueta-texx-corta-vento-neon-preto.jpg" alt="">
+                <h3>Jaqueta Texx Corta Vento Neon </h3>
+                <p>Cor: Preto <br> Tamanho: XL, 2XL</p>
+                <p class="price">229,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>  
+            <div class="product-card vestuario jaqueta">
+                <img src="images/produtos/jaqueta-x11-one-feminina-preto-rosa.jpg" alt="">
+                <h3>Jaqueta X11 One 2 Feminina </h3>
+                <p>Cor: Preto/Rosa <br> Tamanho: G, GG</p>
+                <p class="price">535,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>  
+            <div class="product-card vestuario jaqueta">
+                <img src="images/produtos/jaqueta-x11-one-masculina-preto.jpg" alt="">
+                <h3>Jaqueta X11 One 2 Masculina </h3>
+                <p>Cor: Preto <br> Tamanho: GG, 3G</p>
+                <p class="price">535,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div> 
+            <div class="product-card vestuario jaqueta">
+                <img src="images/produtos/jaqueta-x11-super-air-masculina-preto.jpg" alt="">
+                <h3>Jaqueta X11 Super Air Masculina </h3>
+                <p>Cor: Preto <br> Tamanho: G, 4G</p>
+                <p class="price">430,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div> 
+            <div class="product-card vestuario luva">
+                <img src="images/produtos/luva-impermeavel-sky-preta.jpg" alt="">
+                <h3>Luva Impermeavel Sky  </h3>
+                <p>Cor: Preta com laranja</p>
+                <p class="price">95,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div> 
+            <div class="product-card vestuario luva">
+                <img src="images/produtos/luva-prg-couro-ecologico.jpg" alt="">
+                <h3>Luva Prg Couro Ecologico Impermeavel  </h3>
+                <p>Cor: Preta </p>
+                <p class="price">62,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div> 
+            <div class="product-card vestuario luva">
+                <img src="images/produtos/luva-x11-blackout-12-dedo-masculina.jpg" alt="">
+                <h3>Luva X11 Blackout 2 1/2 Dedo Masculina  </h3>
+                <p>Cor: Preta </p>
+                <p class="price">93,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div> 
+            <div class="product-card vestuario luva">
+                <img src="images/produtos/luva-x11-blackout-2-masculina-preto.jpg" alt="">
+                <h3>Luva X11 Blackout 2 Masculina </h3>
+                <p>Cor: Preta </p>
+                <p class="price">105,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div> 
+            <div class="product-card vestuario luva">
+                <img src="images/produtos/luva-x11-blackproof-preto.jpg" alt="">
+                <h3>Luva X11 Blackproof </h3>
+                <p>Cor: Preta </p>
+                <p class="price">195,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div> 
+            <div class="product-card vestuario luva">
+                <img src="images/produtos/luva-x11-dry-tech-preto.jpg" alt="">
+                <h3>Luva X11 Dry Tech </h3>
+                <p>Cor: Preta </p>
+                <p class="price">175,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div> 
+            <div class="product-card vestuario luva">
+                <img src="images/produtos/luva-x11-fit.jpg" alt="">
+                <h3>Luva X11 Fit X </h3>
+                <p>Cor: Preta </p>
+                <p class="price">78,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+
+            <div class="product-card vestuario conj-chuva">
+                <img src="images/produtos/conj-chuva-alba-pvc.jpg" alt="">
+                <h3>Conjunto Chuva Alba PVC </h3>
+                <p>Tamanho: P, G </p>
+                <p class="price">189,00</p>
+                <a href="#" class="whatsapp-product-button">
+                    <span class="whatsapp-icon"><i class="fab fa-whatsapp"></i></span>
+                    <span class="whatsapp-text">Comprar pelo WhatsApp</span>
+                </a>
+            </div>
+            
+
+            
+            <!-- Adicionar mais produtos-->
+            
+        </div>
+        <button id="load-more">Exibir mais</button>
+        <button id="load-less" style="display: none;">Exibir menos</button>
+    </section>
+
+      
+    
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Fale conosco nas redes sociais ou envie uma mensagem pelo WhatsApp. <br> <br> Telefone: (44) 3269-8021 - (44) 9 9923-1237</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/kazzamotosmga?locale=pt_BR" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/kazzamotosmga/" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5544999231237" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="overlay"></div>
+    </section>
+
+    
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section contact">
+                <h2>Loja</h2>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i>Av. Cerro Azul, 2018 - Jardim Novo Horizonte</li>
+                    <li><i class="fas fa-phone-alt"></i>(44) 3269-8021 </li>
+                    <li><i class="fab fa-whatsapp"></i>(44) 99923-1237</li>
+                </ul>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="#home">Página Inicial</a></li>
+                    <li><a href="#products">Produtos</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kazza Motos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+        
+    <script src="script.js"></script>
+</body>
+</html>
+
+
