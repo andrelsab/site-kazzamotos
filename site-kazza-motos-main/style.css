@@ -188,6 +188,7 @@ header .search-bar button {
     text-align: left;
     border: none;
     width: 100%; /* Cada botão ocupa 100% da largura do dropdown */
+    text-indent: 10px; /* ajuste o valor conforme necessário */
 }
 
 .filter-bar-primary .dropdown-content .filter-btn:hover {
@@ -407,6 +408,7 @@ header .search-bar button {
     flex-wrap: wrap;
     position: relative;
     margin: 0 auto; /* Centraliza a grid na página */
+    margin-top: 20px;
     max-width: 1300px; /* Define uma largura máxima para a grid */
     z-index: 0;
 }
