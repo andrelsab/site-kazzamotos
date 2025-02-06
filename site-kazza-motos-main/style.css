@@ -463,6 +463,7 @@ header .search-bar button {
 }
 
 .product-card .price {
+    display: none;
     font-size: 1.5em;
     font-weight: bold;
     color: #ffffff;
@@ -479,13 +480,14 @@ header .search-bar button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-top: auto;
-    padding: 10px 20px;
+    margin-top: 30px;
+    padding: 15px 30px;
     background-color: #25d366;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: bold; 
     transition: background-color 0.3s;
 }
 
@@ -494,7 +496,7 @@ header .search-bar button {
 }
 
 .whatsapp-product-button i {
-    margin-right: 5px;
+    margin-right: 7px;
 }
 
 #load-less,
@@ -682,6 +684,13 @@ footer {
         margin: 10px 0; 
         font-size: 1rem; 
     }
+
+    .whatsapp-product-button {
+        padding: 10px 20px; /* Reduz o padding */
+        margin: 5px;
+        font-size: 14px; /* Fonte menor */
+    }
+
 
     header {
         flex-direction: column;
