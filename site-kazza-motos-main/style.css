@@ -652,6 +652,7 @@ footer {
     .filter-buttons {
         flex-wrap: wrap; 
         justify-content: center; 
+        margin-bottom: 10px;
     }
 
     .filter-btn {
@@ -668,6 +669,15 @@ footer {
     .product-card {
         width: calc(50% - 20px); 
     }
+
+    .product-card p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Limita a 2 linhas */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
 
     .filter-buttons {
         flex-wrap: wrap; 
@@ -688,7 +698,7 @@ footer {
     .whatsapp-product-button {
         padding: 10px 20px; /* Reduz o padding */
         margin: 5px;
-        font-size: 14px; /* Fonte menor */
+        font-size: 12px; /* Fonte menor */
     }
 
 
